@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fatımparatora Təbrik 🌼</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #87ceeb;
+      /* Göy üfüqü */
+      overflow: hidden;
+      position: relative;
+      font-family: 'Georgia', serif;
+    }
+
+    .flower {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: url('https://static.vecteezy.com/system/resources/previews/024/955/450/non_2x/daisy-flower-isolated-on-background-with-generative-ai-png.png') no-repeat center/contain;
+      pointer-events: none;
+      opacity: 0.9;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    .greeting {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      font-family: cursive;
+      font-weight: 700;
+      color: chartreuse;
+      text-shadow: 2px 2px 5px #000;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="greeting">FATİMPARATOR<br>AD GÜNÜN MÜBARƏK</div>
+
+  <script>
+    const flowerCount = 50; // neçə papatya
+    for (let i = 0; i < flowerCount; i++) {
+      let flower = document.createElement('div');
+      flower.className = 'flower';
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = 5 + Math.random() * 5 + 's';
+      flower.style.transform = `scale(${0.5 + Math.random()})`;
+      document.body.appendChild(flower);
+    }
+  </script>
+
+</body>
+
+</html>
