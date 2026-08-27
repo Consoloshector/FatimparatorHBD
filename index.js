@@ -1,22 +1,24 @@
 // 1. Owl Carousel Initialization
-$('.carusel').owlCarousel({
-    margin: 10,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    smartSpeed: 1000,
-    responsive: {
-        0: {
-            items: 1,
-            nav: false
-        },
-        1000: {
-            items: 2,
-            nav: false
-        }
-    }
-});
+if ($('.carusel').length) {
+    $('.carusel').owlCarousel({
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            1000: {
+                items: 2,
+                nav: false
+            }
+        }
+    });
+}
 
 // 2. Mobile Menu Toggle & Scroll Fix
 $(".nav-bars").click(function () {
